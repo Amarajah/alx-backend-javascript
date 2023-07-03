@@ -1,13 +1,11 @@
-export default function updateUniqueItems(map) {
-  if (!(map instanceof Map)) {
-   throw new Error("Cannot process");
+export default function updateUniqueItems(items) {
+  if (!(items instanceof Map)) {
+    throw new Error('Cannot process');
   }
-
-  const freshMap = new Map();
-  for (const [item, quantity] of freshMap.entries()) {
-    if (quantity === 1) {
-      freshMap.set(item, 100);
-      }
-  };
-  return freshMap;
+  for (const [k, v] of items.entries()) {
+    if (v === 1) {
+      items.set(k, 100);
+    }
+  }
+  return items;
 }
