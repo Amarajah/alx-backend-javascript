@@ -8,14 +8,14 @@ export default function updateStudentGradeByCity(listOfStudents, city, newGrades
       const gradeValue = newGrades.find((grade) => grade.studentId === student.id);
 
       if (gradeValue) {
-	return {
+        return {
 	    ...student,
 	    grade: gradeValue.grade,
-	};
+        };
       }
-	return {
+      return {
 	    ...student,
 	    grade: 'N/A',
-	};
+      };
     });
 }
