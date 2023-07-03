@@ -4,12 +4,10 @@ export default function updateUniqueItems(map) {
   }
 
   const freshMap = new Map();
-  for (const [item, quantity] of map) {
+  for (const [item, quantity] of freshMap.entries()) {
     if (quantity === 1) {
       freshMap.set(item, 100);
-    } else {
-      freshMap.set(item, quantity);
-    }
+      }
   };
   return freshMap;
 }
